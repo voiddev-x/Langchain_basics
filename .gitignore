@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
+
+# Environments and Secrets
+.env*
+!.env.example
+
+# Logs and local databases
+*.log
+*.sqlite3
+
+# AI/ML specific (LangChain, LlamaIndex, etc.)
+.langchain_cache/
+**/chroma/
+**/faiss/

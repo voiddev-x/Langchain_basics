@@ -1,0 +1,21 @@
+from langchain_huggingface import HuggingFaceEndpoint
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# Use HuggingFaceEndpoint directly as the LLM
+llm = HuggingFaceEndpoint(
+    repo_id="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    task="text-generation",
+    max_new_tokens=512  # It's good practice to set a token limit
+)
+
+# Invoke the LLM directly
+# The result will be a string, not a message object
+result = llm.invoke("what is the capital of mumbai")
+
+# Print the string result directly
+print(result)
+
+
+
