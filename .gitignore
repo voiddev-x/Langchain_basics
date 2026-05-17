@@ -24,3 +24,5 @@ wheels/
 **/chroma/
 **/faiss/
 
+#just don't feel like pushing it
+basic_dummy.ipynb
