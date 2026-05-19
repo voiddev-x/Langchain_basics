@@ -1,0 +1,219 @@
+================================================================================
+                     CATEGORIES OF SIGNALS - A COMPREHENSIVE GUIDE
+================================================================================
+
+A signal is any physical quantity that carries information and varies with time,
+space, or another independent variable. Signals are fundamental to communication,
+engineering, biology, finance, and many other fields.
+
+--------------------------------------------------------------------------------
+1. BASED ON TIME (CONTINUOUS vs. DISCRETE)
+--------------------------------------------------------------------------------
+
+Continuous-Time (Analog) Signals
+  - Defined for every instant of time along a continuous time axis.
+  - Examples: sound waves, temperature readings from a thermometer, ECG waveforms.
+  - Represented mathematically as x(t), where t is a real-valued variable.
+
+Discrete-Time Signals
+  - Defined only at specific, equally spaced instants of time.
+  - Produced by sampling a continuous signal at regular intervals.
+  - Examples: digital audio samples, stock prices recorded daily, pixel values.
+  - Represented as x[n], where n is an integer index.
+
+--------------------------------------------------------------------------------
+2. BASED ON AMPLITUDE (ANALOG vs. DIGITAL)
+--------------------------------------------------------------------------------
+
+Analog Signals
+  - Amplitude can take any value within a continuous range.
+  - Examples: AM/FM radio waves, audio from a microphone, voltage from a sensor.
+
+Digital Signals
+  - Amplitude is restricted to a finite set of discrete levels (usually 0 and 1).
+  - Examples: computer data, digital audio, binary communication streams.
+
+--------------------------------------------------------------------------------
+3. BASED ON DETERMINISM
+--------------------------------------------------------------------------------
+
+Deterministic Signals
+  - Completely predictable at any point in time; described by a mathematical function.
+  - Examples: sine waves, square waves, ramp signals.
+
+Random (Stochastic) Signals
+  - Cannot be predicted exactly; described using statistical properties.
+  - Examples: thermal noise, speech, seismic activity, stock market fluctuations.
+
+--------------------------------------------------------------------------------
+4. BASED ON PERIODICITY
+--------------------------------------------------------------------------------
+
+Periodic Signals
+  - Repeat themselves exactly after a fixed interval called the period (T).
+  - Condition: x(t) = x(t + T) for all t.
+  - Examples: sine wave, cosine wave, square wave, sawtooth wave.
+
+Aperiodic (Non-Periodic) Signals
+  - Do not repeat themselves over time.
+  - Examples: a single pulse, speech signals, exponential decay.
+
+--------------------------------------------------------------------------------
+5. BASED ON DIMENSIONALITY
+--------------------------------------------------------------------------------
+
+One-Dimensional (1D) Signals
+  - Vary with a single independent variable (usually time).
+  - Examples: audio signals, ECG, temperature vs. time.
+
+Two-Dimensional (2D) Signals
+  - Vary with two independent variables (e.g., spatial coordinates).
+  - Examples: grayscale images (intensity as a function of x and y).
+
+Multi-Dimensional Signals
+  - Vary with three or more independent variables.
+  - Examples: video (2D space + time), MRI scans (3D volumetric data).
+
+--------------------------------------------------------------------------------
+6. BASED ON ENERGY AND POWER
+--------------------------------------------------------------------------------
+
+Energy Signals
+  - Have finite total energy and zero average power.
+  - Examples: a single rectangular pulse, a decaying exponential.
+
+Power Signals
+  - Have finite average power and infinite total energy.
+  - Examples: periodic signals (sine waves, square waves), random noise.
+
+Neither Energy nor Power Signals
+  - Signals that are unbounded (e.g., a ramp signal x(t) = t).
+
+--------------------------------------------------------------------------------
+7. BASED ON SYMMETRY
+--------------------------------------------------------------------------------
+
+Even (Symmetric) Signals
+  - Mirror image about the vertical axis: x(t) = x(-t).
+  - Examples: cosine wave, Gaussian pulse.
+
+Odd (Anti-Symmetric) Signals
+  - Negative mirror image: x(-t) = -x(t).
+  - Examples: sine wave, signum function.
+
+Neither Even nor Odd
+  - Most real-world signals fall into this category.
+  - Any signal can be decomposed into an even and an odd component.
+
+--------------------------------------------------------------------------------
+8. BASED ON CAUSAL NATURE
+--------------------------------------------------------------------------------
+
+Causal Signals
+  - Zero for all time before t = 0; they "start" at some point.
+  - Examples: unit step function, physical system responses.
+
+Anti-Causal Signals
+  - Zero for all time after t = 0.
+
+Non-Causal Signals
+  - Exist for both negative and positive time.
+  - Examples: two-sided exponential, ideal sinc function.
+
+--------------------------------------------------------------------------------
+9. BASED ON ORIGIN / DOMAIN OF APPLICATION
+--------------------------------------------------------------------------------
+
+Biomedical Signals
+  - Originate from the human body and carry physiological information.
+  - Examples: ECG (heart), EEG (brain), EMG (muscles), blood pressure waveforms.
+
+Communication Signals
+  - Carry information over a channel.
+  - Examples: modulated radio signals (AM, FM, QAM), optical signals in fiber.
+
+Audio Signals
+  - Represent sound pressure variations.
+  - Examples: speech, music, sonar pulses.
+
+Video / Image Signals
+  - Represent visual information spatially and temporally.
+  - Examples: video streams, satellite imagery, X-ray images.
+
+Seismic Signals
+  - Represent vibrations in the Earth's crust.
+  - Examples: earthquake waveforms, oil exploration data.
+
+Financial Signals
+  - Represent economic data varying over time.
+  - Examples: stock prices, exchange rates, trading volume.
+
+Control Signals
+  - Used to regulate systems and machines.
+  - Examples: PID controller output, servo motor commands.
+
+--------------------------------------------------------------------------------
+10. BASED ON SPECTRAL CHARACTERISTICS
+--------------------------------------------------------------------------------
+
+Baseband Signals
+  - Occupy a frequency range starting near 0 Hz.
+  - Examples: audio (20 Hz – 20 kHz), raw sensor data.
+
+Bandpass Signals
+  - Occupy a frequency band centered around a carrier frequency above 0 Hz.
+  - Examples: modulated radio signals, wireless LAN signals.
+
+Narrowband Signals
+  - Bandwidth is very small compared to the center frequency.
+  - Examples: single-channel AM radio, CW radar.
+
+Wideband / Broadband Signals
+  - Spread across a large frequency range.
+  - Examples: spread-spectrum communications, ultra-wideband (UWB) radar.
+
+--------------------------------------------------------------------------------
+11. SPECIAL / ELEMENTARY SIGNAL TYPES
+--------------------------------------------------------------------------------
+
+Unit Impulse (Dirac Delta) — δ(t)
+  - An idealized signal of infinite amplitude and zero duration with unit area.
+  - Used as a mathematical tool to analyze system responses.
+
+Unit Step — u(t)
+  - Zero for t < 0, one for t ≥ 0.
+  - Models switching events and is used in control analysis.
+
+Ramp Signal
+  - Linearly increases with time: x(t) = t · u(t).
+
+Sinusoidal Signal
+  - x(t) = A sin(2πft + φ); the building block of Fourier analysis.
+
+Exponential Signal
+  - x(t) = A·e^(αt); models growth (α > 0) or decay (α < 0).
+
+Sinc Signal
+  - sinc(t) = sin(πt)/(πt); fundamental to sampling theory.
+
+================================================================================
+                                   SUMMARY TABLE
+================================================================================
+
+ Category Basis          | Examples of Types
+-------------------------+-------------------------------------------------------
+ Time domain             | Continuous-time, Discrete-time
+ Amplitude               | Analog, Digital
+ Determinism             | Deterministic, Random/Stochastic
+ Periodicity             | Periodic, Aperiodic
+ Dimensionality          | 1D, 2D, Multi-dimensional
+ Energy / Power          | Energy signal, Power signal
+ Symmetry                | Even, Odd
+ Causal nature           | Causal, Anti-causal, Non-causal
+ Application domain      | Biomedical, Audio, Video, Seismic, Financial, Control
+ Spectral characteristics| Baseband, Bandpass, Narrowband, Broadband
+ Elementary types        | Impulse, Step, Ramp, Sinusoidal, Exponential, Sinc
+
+================================================================================
+                                    END OF FILE
+================================================================================co
