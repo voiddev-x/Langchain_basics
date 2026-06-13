@@ -20,6 +20,7 @@ dependencies = [
     "langchain-huggingface>=1.2.1",
     "langchain-mistralai>=1.1.2",
     "langchain-openai>=1.1.12",
+    "langchain-tavily>=0.2.18",
     "numpy>=2.4.3",
     "openai>=2.30.0",
     "pdfminer-six>=20260107",
