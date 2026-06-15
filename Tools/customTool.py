@@ -30,11 +30,11 @@ result = T_llm.invoke(messages)
 messages.append(result)
 
 if result.tool_calls:
-    tool_call = result.tool_calls[0]
-    tool_name = tool_call["name"]
-    tool_message = tool_registry[tool_name].invoke(tool_call)
-    messages.append(tool_message)
-    
+    for tool_call in result.tool_calls:
+        tool_name = tool_call["name"]
+        tool_message = tool_registry[tool_name].invoke(tool_call)
+        messages.append(tool_message)
+        
 final_response = T_llm.invoke(messages)
 print(final_response.content)
 
